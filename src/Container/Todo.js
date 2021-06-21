@@ -1,7 +1,7 @@
-import React from 'react';
-import './Todo.css';
-import Todolist from './Todolist';
-import { Form, Input, Button } from 'reactstrap';
+import React from "react";
+import "./Todo.css";
+import Todolist from "./Todolist";
+import { Form, Input, Button } from "reactstrap";
 import { addTodoAction, toggleCheckAction, toggleButtonAction, editTodoAction, deleteTodoAction } from "../reduxAction/todosAction";
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ class Todo extends React.Component {
     this.setState({
       todo: event.target.value
     })
-  }
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -35,24 +35,24 @@ class Todo extends React.Component {
         todo: ""
       })
     }
-  }
+  };
 
   handleCheck = (key) => {
     this.props.toggleCheck(key);
-  }
+  };
 
   handleToggle = (key) => {
     this.props.toggleButton(key);
-  }
+  };
 
   handleEdit = (todo, key) => {
     const editodo = { todo: todo, key: key };
     this.props.editTodo(editodo);
-  }
+  };
 
   handleDelete = (key) => {
     this.props.deleteTodo(key);
-  }
+  };
 
   render() {
     return (
@@ -73,14 +73,13 @@ class Todo extends React.Component {
       </div>
     );
   }
-}
+};
 
 //React redux
 
 const mapStateToProps = (state) => {
   return { todo: state }
 };
-
 
 const mapDispatchToProps = (dispatch) => {
   return {

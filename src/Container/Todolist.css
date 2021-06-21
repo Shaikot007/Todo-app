@@ -42,7 +42,7 @@
   .EditOrSave { margin: 0% 1% 0% 0%; width: 40%; }
   .EditOrSaveButton { margin: 0% 1% 0% 1%; width: 24%; }
   .DeleteButton { margin: 0% 0% 0% 1%; width: 24%; }
-} 
+}
 
 /* Media queries for tablets */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {

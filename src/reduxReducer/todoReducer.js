@@ -7,11 +7,11 @@ export const todoReducer = (state = [], action) => {
     case SUBMIT:
       return [...state, action.todo];
     case CHECK:
-      return [...state].map(todo => todo.key === action.check ? {...todo, checked: !todo.checked} : todo);
+      return [...state].map(todo => todo.key === action.check ? { ...todo, checked: !todo.checked } : todo);
     case TOGGLE:
-      return [...state].map(todo => todo.key === action.toggle ? {...todo, toggle: !todo.toggle} : todo);
+      return [...state].map(todo => todo.key === action.toggle ? { ...todo, toggle: !todo.toggle } : todo);
     case EDIT:
-      return [...state].map(todo => todo.key === action.key ? {...todo, todo: todo.todo = action.edittodo} : todo);
+      return [...state].map(todo => todo.key === action.key ? { ...todo, todo: todo.todo = action.edittodo } : todo);
     case DELETE:
       return [...state].filter(todo => todo.key !== action.delete);
     default:
